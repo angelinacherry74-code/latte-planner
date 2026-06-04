@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Aesthetic Web-Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Підключаємо гарний затишний шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div class="notebook-container">
+        <!-- Бічні закладки (Таби) -->
+        <div class="tabs" role="tablist" aria-label="Розділи блокнота">
+            <button type="button" class="tab-btn active" data-tab="tab1">Плани</button>
+            <button type="button" class="tab-btn" data-tab="tab2">Нотатки</button>
+            <button type="button" class="tab-btn" data-tab="tab3">Трекер</button>
+            <button type="button" class="tab-btn" data-tab="tab4">Ідеї</button>
+        </div>
+
+        <!-- Сторінка блокнота -->
+        <div class="notebook-page">
+            <div class="page-header">
+                <h2 id="page-title">Мій день • Плани</h2>
+                <span class="save-status" id="save-status">Збережено у браузері ✨</span>
+            </div>
+            
+            <!-- Поле для тексту в лінію -->
+            <textarea id="notebook-textarea" placeholder="Почніть писати тут ваші затишні думки..."></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

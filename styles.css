@@ -1,0 +1,128 @@
+:root {
+    --paper: #FFFDF9;
+    --paper-soft: #F9F6F0;
+    --ink: #4E3D30;
+    --muted: #A9927D;
+    --line: #EADCC9;
+    --tab: #D6C5B3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, var(--paper-soft), #F3EEE8);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 20px;
+}
+
+.notebook-container {
+    display: flex;
+    width: 100%;
+    max-width: 720px;
+    min-height: 480px;
+    height: clamp(420px, 78vh, 560px);
+    position: relative;
+}
+
+/* Стиль бічних закладок */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.tab-btn {
+    background-color: var(--tab);
+    border: none;
+    color: var(--ink);
+    padding: 12px 18px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 13px;
+    border-radius: 12px 0 0 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
+    min-height: 56px;
+}
+
+.tab-btn:hover {
+    background-color: var(--muted);
+    color: var(--paper);
+}
+
+.tab-btn:focus-visible {
+    outline: 2px solid var(--muted);
+    outline-offset: 2px;
+}
+
+.tab-btn.active {
+    background-color: var(--paper);
+    color: var(--muted);
+    font-weight: 500;
+    padding-right: 25px;
+    box-shadow: -4px 4px 10px rgba(78, 61, 48, 0.05);
+}
+
+/* Сторінка блокнота */
+.notebook-page {
+    background-color: var(--paper);
+    flex: 1;
+    border-radius: 0 20px 20px 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(78, 61, 48, 0.08);
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid var(--tab);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #D6C5B3;
+    padding-bottom: 10px;
+}
+
+#page-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.save-status {
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+/* Текстове поле в лінію */
+textarea {
+    width: 100%;
+    flex: 1;
+    border: none;
+    resize: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 27px;
+    color: var(--ink);
+    caret-color: var(--muted);
+    background-image: linear-gradient(var(--paper) 96%, var(--line) 4%);
+    background-size: 100% 27px;
+    background-attachment: local;
+}

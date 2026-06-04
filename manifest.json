@@ -1,0 +1,17 @@
+{
+  "short_name": "Блокнот",
+  "name": "Мій затишний веб-блокнот",
+  "icons": [
+    {
+      "src": "icon.png.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "id": ".",
+  "start_url": ".",
+  "scope": ".",
+  "background_color": "#F9F6F0",
+  "display": "standalone",
+  "theme_color": "#A9927D"
+}
