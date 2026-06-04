@@ -3,7 +3,7 @@
   "name": "Мій затишний веб-блокнот",
   "icons": [
     {
-      "src": "icon.png.png",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "192x192"
     }
